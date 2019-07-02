@@ -1,0 +1,31 @@
+- name: install bash package
+  yum:
+    name:
+      - wget
+      - vim 
+      - net-tools
+      - bash-completion
+      - bash-completion-extras
+      - lrzsz
+    state: present
+
+- name: Disable SELinux
+  selinux:
+    state: disabled
+
+  
+- name: systemctl status firewalld.service
+  service:
+    name: firewalld
+    state: stopped
+    enabled: no
+
+- name: change system locale and keyboard settings
+  locale_gen:
+    name: en_US.UTF-8                 
+    state: present
+
+- name: Set timezone to Asia/Shanghai
+  timezone:
+    name: Asia/Shanghai
+
