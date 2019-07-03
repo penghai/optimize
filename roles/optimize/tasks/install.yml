@@ -13,7 +13,7 @@
   selinux:
     state: disabled
   
-- name: systemctl status firewalld.service
+- name: systemctl stop firewalld.service
   service:
     name: firewalld
     state: stopped
@@ -27,3 +27,10 @@
 - name: Set timezone to Asia/Shanghai
   timezone:
     name: Asia/Shanghai
+
+- name: Set /etc/security/limits.conf
+  pam_limits:
+    domain: *
+    limit_item: 
+    limit_type:
+    
