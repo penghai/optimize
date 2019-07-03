@@ -12,7 +12,6 @@
 - name: Disable SELinux
   selinux:
     state: disabled
-
   
 - name: systemctl status firewalld.service
   service:
@@ -22,10 +21,9 @@
 
 - name: change system locale and keyboard settings
   locale_gen:
-    name: en_US.UTF-8                 
+    name: en_US.UTF-8
     state: present
 
 - name: Set timezone to Asia/Shanghai
   timezone:
     name: Asia/Shanghai
-
