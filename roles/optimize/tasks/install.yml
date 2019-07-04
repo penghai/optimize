@@ -7,6 +7,12 @@
       - bash-completion
       - bash-completion-extras
       - lrzsz
+      - sshpass
+      - gcc
+      - gcc-c++
+      - libffi-devel
+      - openssl-devel
+      - python-devel
     state: present
 
 - name: Disable SELinux
