@@ -1,0 +1,5 @@
+- hosts: optimize_nodes
+  vars_files:
+    - "vars/optimize.yml"
+  roles:
+  - role: optimize

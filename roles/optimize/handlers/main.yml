@@ -1,2 +1,4 @@
 ---
 # handlers file for optimize
+- name: systemctl daemon-reexec
+  shell: systemctl daemon-reexec
