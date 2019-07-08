@@ -1,0 +1,10 @@
+- name: set /etc/profile
+  lineinfile:
+    path: /etc/profile
+    regexp: '{{ item.regexp }}'
+    line: '{{ item.line }}'
+  with_items:
+    - { regexp: '^HISTTIMEFORMAT',line: 'export HISTTIMEFORMAT="%F %T `whoami` "' }
+    - { regexp: '^HISTSIZE',line: 'HISTSIZE=3000' }
+    - { regexp: '^shopt',line: 'shopt -s histappend' }
+  notify: source /etc/profile

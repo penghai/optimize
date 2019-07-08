@@ -2,3 +2,11 @@
 # handlers file for optimize
 - name: systemctl daemon-reexec
   shell: systemctl daemon-reexec
+
+- name: restart sshd
+  service:
+    name: sshd
+    state: restarted
+
+- name: source /etc/profile
+  shell: source /etc/profile
