@@ -3,6 +3,8 @@
 
 - include: install.yml
 
+- include: config_kernel.yml
+
 - include: config_ssh.yml
 
 - include: config_profile.yml
