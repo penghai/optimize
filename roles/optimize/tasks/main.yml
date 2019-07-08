@@ -2,3 +2,7 @@
 # tasks file for optimize
 
 - include: install.yml
+
+- include: config_ssh.yml
+
+- include: config_profile.yml
