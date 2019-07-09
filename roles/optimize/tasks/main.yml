@@ -8,3 +8,5 @@
 - include: config_ssh.yml
 
 - include: config_profile.yml
+
+- include: config_chrony.yml
