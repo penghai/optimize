@@ -13,6 +13,8 @@
       - libffi-devel
       - openssl-devel
       - python-devel
+      - ntpdate
+      - chrony 
     state: present
 
 - name: Disable SELinux

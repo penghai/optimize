@@ -1,2 +1,4 @@
 
 LC_ALL: en_US.utf8
+
+ntp_server: ntp.aliyun.com      

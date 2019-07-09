@@ -1,0 +1,13 @@
+- name: Time synchronization(ntpdate)
+  shell: ntpdate {{ntp_server}}
+  ignore_errors: yes
+
+- name: Time synchronization(ntpdate)
+  shell: hwclock -w 
+  ignore_errors: yes
+
+- name: config /etc/chrony.conf
+  template:
+    src: chrony.conf
+    dest: /etc/chrony.conf
+  notify: restart chronyd

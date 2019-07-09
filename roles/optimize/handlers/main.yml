@@ -10,3 +10,9 @@
 
 - name: source /etc/profile
   shell: source /etc/profile
+
+- name: restart chronyd
+  service:
+    name: chronyd
+    state: restarted
+    enabled: yes
