@@ -64,4 +64,4 @@
     - { name: 'net.ipv4.neigh.default.gc_thresh1',value: '1024' }
     - { name: 'net.ipv4.neigh.default.gc_thresh2',value: '2048' }
     - { name: 'net.ipv4.neigh.default.gc_thresh3',value: '4096' }
-  notify: route_flush
+  notify: route flush
