@@ -16,7 +16,7 @@ aliyuncs.com/centos/$releasever/os/$basearch/' }
 irrors.cloud.aliyuncs.com/centos/$releasever/updates/$basearch/' }
     - { name: 'extras',baseurl: 'http://mirrors.aliyun.com/centos/$releasever/extras/$basearch/,http://mirrors.aliyuncs.com/centos/$releasever/extras/$basearch/,http://mirr
 ors.cloud.aliyuncs.com/centos/$releasever/extras/$basearch/' }
-  when: "'{{install_yum_mode}}' == 'aliyun'"
+  when: "'(install_yum_mode)' == 'aliyun'"
 
 - name: Add epel repository 
   yum_repository:
@@ -28,4 +28,4 @@ ors.cloud.aliyuncs.com/centos/$releasever/extras/$basearch/' }
     state: present
     gpgcheck: no
     enabled: yes
-  when: "'{{install_yum_mode}}' == 'aliyun'"
+  when: "'(install_yum_mode)' == 'aliyun'"
