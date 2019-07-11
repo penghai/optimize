@@ -1,4 +1,6 @@
-
-LC_ALL: en_US.utf8
+#Set the type of yum source to use (local|aliyun)
+install_yum_mode: local
 
 ntp_server: ntp.aliyun.com      
+
+LC_ALL: en_US.utf8

@@ -1,0 +1,31 @@
+- name: Add CentOS-Base repository
+  yum_repository:
+    file: CentOS-Base
+    name: '{{ item.name }}'
+    description: Centos7 {{ item.name }} source
+    baseurl: '{{ item.baseurl }}'
+    failovermethod: priority
+    state: present
+    gpgcakey: http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+    gpgcheck: yes
+    enabled: yes
+  with_items:
+    - { name: 'base',baseurl: 'http://mirrors.aliyun.com/centos/$releasever/os/$basearch/,http://mirrors.aliyuncs.com/centos/$releasever/os/$basearch/,http://mirrors.cloud.
+aliyuncs.com/centos/$releasever/os/$basearch/' }
+    - { name: 'updates',baseurl: 'http://mirrors.aliyun.com/centos/$releasever/updates/$basearch/,http://mirrors.aliyuncs.com/centos/$releasever/updates/$basearch/,http://m
+irrors.cloud.aliyuncs.com/centos/$releasever/updates/$basearch/' }
+    - { name: 'extras',baseurl: 'http://mirrors.aliyun.com/centos/$releasever/extras/$basearch/,http://mirrors.aliyuncs.com/centos/$releasever/extras/$basearch/,http://mirr
+ors.cloud.aliyuncs.com/centos/$releasever/extras/$basearch/' }
+  when: "'{{install_yum_mode}}' == 'aliyun'"
+
+- name: Add epel repository 
+  yum_repository:
+    file: epel
+    name: epel
+    description: Extra Packages for Enterprise Linux 7 - $basearch
+    baseurl: http://mirrors.aliyun.com/epel/7/$basearch
+    failovermethod: priority
+    state: present
+    gpgcheck: no
+    enabled: yes
+  when: "'{{install_yum_mode}}' == 'aliyun'"
