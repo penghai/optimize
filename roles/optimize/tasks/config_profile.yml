@@ -8,3 +8,12 @@
     - { regexp: '^HISTSIZE',line: 'HISTSIZE=3000' }
     - { regexp: '^shopt',line: 'shopt -s histappend' }
   notify: source /etc/profile
+
+- name: config /etc/rc.d/rc.local is Huge pages
+  template:
+    src: rc.local
+    dest: /etc/rc.d/rc.local
+    owner: root
+    group: root
+    mode: '0755'
+
