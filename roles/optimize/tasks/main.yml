@@ -1,12 +1,14 @@
 ---
 # tasks file for optimize
 
+- include: config_repo.yml
+
 - include: install.yml
+
+- include: config_profile.yml
 
 - include: config_kernel.yml
 
 - include: config_ssh.yml
-
-- include: config_profile.yml
 
 - include: config_chrony.yml
