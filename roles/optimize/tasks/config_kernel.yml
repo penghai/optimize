@@ -46,7 +46,6 @@
     - { name: 'net.ipv4.tcp_syncookies',value: '1' }
     - { name: 'net.ipv4.tcp_fin_timeout',value: '30' }
     - { name: 'net.core.somaxconn',value: '65535' }
-    - { name: 'net.ipv4.ip_nonlocal_bind',value: '1' }
     - { name: 'net.ipv4.tcp_max_orphans',value: '3276800' }
     - { name: 'net.unix.max_dgram_qlen',value: '20480' }
     - { name: 'fs.file-max',value: '1024000' }
