@@ -20,6 +20,7 @@
 - name: Disable SELinux
   selinux:
     state: disabled
+  notify: reboot 
   
 - name: systemctl stop firewalld.service
   service:

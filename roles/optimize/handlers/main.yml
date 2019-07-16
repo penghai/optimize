@@ -24,3 +24,6 @@
     state: present
     sysctl_set: yes
     reload: yes
+
+- name: reboot
+  reboot:
