@@ -13,3 +13,19 @@
     owner: root
     group: root
   when: "(install_yum_mode) == 'aliyun'"
+
+- name: Add CentOS-Base repository
+  template:
+    src: repo/CentOS-Base-local.repo
+    dest: /etc/yum.repos.d/CentOS-Base.repo
+    owner: root
+    group: root
+  when: "(install_yum_mode) == 'local'"
+
+- name: Add epel repository
+  template:
+    src: repo/epel-local.repo
+    dest: /etc/yum.repos.d/epel.repo
+    owner: root
+    group: root
+  when: "(install_yum_mode) == 'local'"
