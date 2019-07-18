@@ -1,5 +1,5 @@
 #Set the type of yum source to use (local|aliyun)
-install_yum_mode: local
+install_yum_mode: aliyun
 
 ntp_server: ntp.aliyun.com      
 
