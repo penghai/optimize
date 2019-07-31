@@ -15,6 +15,7 @@
       - python-devel
       - ntpdate
       - chrony 
+      - xinetd
     state: present
 
 - name: Disable SELinux
