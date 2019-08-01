@@ -45,3 +45,8 @@
     owner: root
     group: root
   when: (install_yum_mode == "local") and (install_openstack == true)
+
+- name: yum update cache
+  yum:
+    update_cache: yes
+    state: present
