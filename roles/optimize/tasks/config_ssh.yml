@@ -13,3 +13,9 @@
     name: postfix
     state: stopped
     enabled: no
+
+- name: stop NetworkManager
+  service:
+    name: NetworkManager
+    state: stopped
+    enabled: no
