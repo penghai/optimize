@@ -16,6 +16,7 @@
       - ntpdate
       - chrony 
       - xinetd
+      - bc
     state: present
 
 - name: Disable SELinux
