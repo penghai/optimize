@@ -36,12 +36,28 @@
     dest: /etc/yum.repos.d/CentOS-OpenStack-rocky.repo
     owner: root
     group: root
-  when: (install_yum_mode == "local") and (install_openstack == true)
+  when: (install_yum_mode == "aliyun") and (install_openstack == true)
 
 - name: Add qemu repository
   template:
     src: repo/CentOS-QEMU-EV.repo
     dest: /etc/yum.repos.d/CentOS-QEMU-EV.repo
+    owner: root
+    group: root
+  when: (install_yum_mode == "aliyun") and (install_openstack == true)
+
+- name: Add openstack repository
+  template:
+    src: repo/CentOS-OpenStack-rocky-local.repo
+    dest: /etc/yum.repos.d/CentOS-OpenStack-rocky.repo
+    owner: root
+    group: root
+  when: (install_yum_mode == "local") and (install_openstack == true)
+
+- name: Add qemu repository
+  template:
+    src: repo/CentOS-QEMU-EV.repo
+    dest: /etc/yum.repos.d/CentOS-QEMU-EV-local.repo
     owner: root
     group: root
   when: (install_yum_mode == "local") and (install_openstack == true)
