@@ -1,0 +1,12 @@
+# CentOS-QEMU-EV.repo
+[centos-qemu-ev]
+name=CentOS-$releasever - QEMU EV
+baseurl=http://172.16.16.10/$contentdir/$releasever/virt/$basearch/kvm-common/
+gpgcheck=0
+enabled=1
+
+[centos-libvirt]
+name=CentOS-$releasever - libvirt
+baseurl=http://172.16.16.10/$contentdir/$releasever/virt/$basearch/libvirt-latest/
+gpgcheck=0
+enabled=1

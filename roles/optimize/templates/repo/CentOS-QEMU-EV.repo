@@ -1,12 +1,16 @@
 # CentOS-QEMU-EV.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/Virtualization for more
+# information
+
 [centos-qemu-ev]
 name=CentOS-$releasever - QEMU EV
-baseurl=http://172.16.16.10/$contentdir/$releasever/virt/$basearch/kvm-common/
+baseurl=http://mirrors.aliyun.com/$contentdir/$releasever/virt/$basearch/kvm-common/
 gpgcheck=0
 enabled=1
 
 [centos-libvirt]
 name=CentOS-$releasever - libvirt
-baseurl=http://172.16.16.10/$contentdir/$releasever/virt/$basearch/libvirt-latest/
+baseurl=http://mirrors.aliyun.com/$contentdir/$releasever/virt/$basearch/libvirt-latest/
 gpgcheck=0
 enabled=1

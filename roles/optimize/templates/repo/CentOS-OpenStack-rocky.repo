@@ -1,7 +1,11 @@
 # CentOS-OpenStack-rocky.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/Cloud for more
+# information
+
 [centos-openstack-rocky]
 name=CentOS-7 - OpenStack rocky
-baseurl=http://172.16.16.10/$contentdir/$releasever/cloud/$basearch/openstack-rocky/
+baseurl=http://mirrors.aliyun.com/$contentdir/$releasever/cloud/$basearch/openstack-rocky/
 gpgcheck=0
 enabled=1
 exclude=sip,PyQt4
