@@ -35,12 +35,6 @@
   timezone:
     name: Asia/Shanghai
 
-- name: Config LC_ALL for OS
-  lineinfile:
-    path: /etc/profile
-    regexp: '^export LC_ALL'
-    line: "export LC_ALL={{ LC_ALL }}"
-
 - name: config /etc/systemd/system.conf
   lineinfile:
     path: /etc/systemd/system.conf
@@ -50,4 +44,3 @@
     - { regexp: '^DefaultLimitNOFILE',line: 'DefaultLimitNOFILE=65535' }
     - { regexp: '^DefaultLimitNPROC',line: 'DefaultLimitNPROC=65535' }
   notify: systemctl daemon-reexec
-

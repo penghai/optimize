@@ -1,3 +1,9 @@
+- name: Config LC_ALL for OS
+  lineinfile:
+    path: /etc/profile
+    regexp: '^export LC_ALL'
+    line: "export LC_ALL={{ LC_ALL }}"
+
 - name: set /etc/profile
   lineinfile:
     path: /etc/profile
@@ -16,4 +22,3 @@
     owner: root
     group: root
     mode: '0755'
-
